@@ -1,0 +1,20 @@
+{
+  "name": "esg-report-evidence-qa",
+  "version": "0.1.2",
+  "private": true,
+  "type": "module",
+  "description": "Single-report ESG evidence assistant: ask questions about one uploaded report and get page-cited, validated answers.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "test": "node --test",
+    "eval": "node eval/run_eval.mjs"
+  },
+  "devDependencies": {
+    "@huggingface/transformers": "3.8.1",
+    "pdfjs-dist": "4.10.38"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

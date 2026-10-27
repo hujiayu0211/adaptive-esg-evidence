@@ -1,0 +1,43 @@
+{
+  "description": "Gold corrections found after runs. Test sets are never edited; scores are reported both as frozen and with these corrections applied.",
+  "T1": {
+    "A06": {
+      "add_gold_pdf_pages": [
+        44
+      ],
+      "evidence": "PDF p.44 (printed 42): 'a 30% reduction from our FY22 baseline' — the evidence regex only matched the summary table on p.11."
+    },
+    "W06": {
+      "add_gold_pdf_pages": [
+        87
+      ],
+      "evidence": "PDF p.87 (printed 85): 'Reduce by 15% (year to 31 Dec 2025) and 30% (year to 31 Dec 2030) below 2016–2020 gross annual average' — the regex missed this wording."
+    }
+  },
+  "T2": {
+    "E05": {
+      "add_any_of": [
+        4.98
+      ],
+      "evidence": "The report gives TRIF as 4.984 on p.5 and as 4.98 on pp.9, 15, 38 and 41. An answer of 4.98 cited to p.41 is faithful to the report; the frozen gold accepted only 4.984.",
+      "add_gold_pdf_pages": [
+        9,
+        15,
+        38,
+        41
+      ]
+    },
+    "E07": {
+      "add_gold_pdf_pages": [
+        71
+      ],
+      "evidence": "PDF p.71: 'has decreased 28% against baseline to 0.29kL/dtm'."
+    },
+    "E12": {
+      "add_gold_pdf_pages": [
+        74
+      ],
+      "evidence": "PDF p.74: 'During FY25, we managed 1,025 ha of rehabilitated land'."
+    }
+  }
+}

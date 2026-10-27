@@ -1,0 +1,58 @@
+{
+  "set": "T1",
+  "mode": "full",
+  "model": "gemini-3.5-flash-lite",
+  "n": 30,
+  "strict_pass": 26,
+  "answer_strict_pass": 17,
+  "answer_n": 21,
+  "answer_lenient_pass": 19,
+  "abstain_pass": 9,
+  "abstain_n": 9,
+  "unsafe_supported": 0,
+  "provider_errors": 0,
+  "abstention_precision": 0.8181818181818182,
+  "abstention_recall": 1,
+  "retrieval_recall_at_k": null,
+  "outcomes": {
+    "pass": 17,
+    "missed": 2,
+    "correct_off_gold_page": 1,
+    "abstained": 9,
+    "partial_correct": 1
+  },
+  "by_type": {
+    "numeric": {
+      "n": 18,
+      "pass": 15
+    },
+    "target_vs_actual": {
+      "n": 1,
+      "pass": 0
+    },
+    "unanswerable": {
+      "n": 4,
+      "pass": 4
+    },
+    "trap_period": {
+      "n": 2,
+      "pass": 2
+    },
+    "trap_company_absent": {
+      "n": 2,
+      "pass": 2
+    },
+    "text": {
+      "n": 2,
+      "pass": 2
+    },
+    "trap_company_present": {
+      "n": 1,
+      "pass": 1
+    }
+  },
+  "model_calls": 27,
+  "prompt_tokens": 3816992,
+  "completion_tokens": 4125,
+  "median_ms": 73780
+}

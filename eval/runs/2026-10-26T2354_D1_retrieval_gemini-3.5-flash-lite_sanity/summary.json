@@ -1,0 +1,30 @@
+{
+  "set": "D1",
+  "mode": "retrieval",
+  "model": "gemini-3.5-flash-lite",
+  "n": 2,
+  "strict_pass": 2,
+  "answer_strict_pass": 2,
+  "answer_n": 2,
+  "answer_lenient_pass": 2,
+  "abstain_pass": 0,
+  "abstain_n": 0,
+  "unsafe_supported": 0,
+  "provider_errors": 0,
+  "abstention_precision": null,
+  "abstention_recall": null,
+  "retrieval_recall_at_k": 1,
+  "outcomes": {
+    "pass": 2
+  },
+  "by_type": {
+    "numeric": {
+      "n": 2,
+      "pass": 2
+    }
+  },
+  "model_calls": 2,
+  "prompt_tokens": 6667,
+  "completion_tokens": 374,
+  "median_ms": 5167
+}

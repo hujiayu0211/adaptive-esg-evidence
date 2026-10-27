@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Report Evidence Assistant</title>
+<meta name="description" content="Ask questions about one ESG or annual report and get answers checked against page-cited passages.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-phase="EMPTY">
+<header class="topbar">
+  <div class="brand"><span class="mark" aria-hidden="true"></span>Report Evidence Assistant</div>
+  <div class="model-tag" id="modelTag">Answer service: checking…</div>
+</header>
+
+<main>
+  <!-- EMPTY / PROCESSING / ERROR -->
+  <section class="start" id="startView" aria-labelledby="startTitle">
+    <h1 id="startTitle">Ask one report. Get answers you can check.</h1>
+    <p class="lede">Upload a corporate or sustainability report as a PDF. Answers come only from that report, each statement is checked against the cited text, and every citation opens the original page.</p>
+
+    <div class="dropzone" id="dropzone">
+      <input type="file" id="fileInput" accept="application/pdf,.pdf" hidden>
+      <div class="drop-idle">
+        <p class="drop-title">Drop a PDF here</p>
+        <button type="button" class="btn primary" id="chooseBtn">Choose a PDF</button>
+        <p class="hint">PDF only, up to 100 MB. Pages without a text layer (scans) are skipped.</p>
+      </div>
+      <div class="drop-busy" aria-live="polite">
+        <p class="drop-title" id="procName">Reading report</p>
+        <div class="progress"><div class="bar" id="procBar"></div></div>
+        <p class="hint" id="procText">Starting…</p>
+        <button type="button" class="btn ghost" id="cancelBtn">Cancel</button>
+      </div>
+      <div class="drop-error" role="alert">
+        <p class="drop-title">This file could not be used</p>
+        <p class="hint" id="errorText"></p>
+        <button type="button" class="btn primary" id="retryBtn">Choose another PDF</button>
+      </div>
+    </div>
+
+    <div class="privacy" id="privacyBox">
+      <h2>Where your report goes</h2>
+      <p>Your PDF stays in this browser and is never uploaded. When you ask a question, only the passages retrieved for that question are sent to <b id="providerName">the model provider</b> to draft an answer. <span id="dataNote"></span></p>
+      <p>Nothing is stored after you clear the report or close the tab.</p>
+    </div>
+
+    <ol class="steps">
+      <li><b>Read.</b> Text is extracted page by page in your browser, keeping printed page numbers.</li>
+      <li><b>Index.</b> Passages are indexed for keyword and meaning search, also in your browser.</li>
+      <li><b>Ask.</b> The answer cites passages; quotes and figures are checked against them before anything is shown as supported.</li>
+    </ol>
+  </section>
+
+  <!-- READY / ANSWERING -->
+  <section class="workspace" id="workspace" aria-label="Report workspace">
+    <div class="tabs" role="tablist">
+      <button type="button" role="tab" class="tab" id="tabChat" aria-selected="true">Questions</button>
+      <button type="button" role="tab" class="tab" id="tabReport" aria-selected="false">Report</button>
+    </div>
+
+    <div class="pane chat" id="chatPane">
+      <div class="report-bar">
+        <div>
+          <div class="report-name" id="reportName"></div>
+          <div class="report-meta" id="reportMeta"></div>
+        </div>
+        <div class="report-actions">
+          <a class="btn ghost small" id="downloadBtn" download>Download original</a>
+          <button type="button" class="btn ghost small danger" id="clearBtn">Clear report</button>
+        </div>
+      </div>
+      <ul class="notes" id="reportNotes"></ul>
+
+      <form class="ask" id="askForm">
+        <label for="question" class="sr-only">Question about this report</label>
+        <textarea id="question" rows="2" maxlength="1000" placeholder="Ask about this report, e.g. What were the Scope 1 emissions in the latest year?"></textarea>
+        <div class="ask-row">
+          <fieldset class="mode">
+            <legend class="sr-only">What to send</legend>
+            <label><input type="radio" name="mode" value="retrieval" checked> Retrieved passages</label>
+            <label><input type="radio" name="mode" value="full"> Full report text</label>
+          </fieldset>
+          <button type="submit" class="btn primary" id="askBtn">Ask</button>
+        </div>
+        <p class="mode-note" id="modeNote"></p>
+      </form>
+
+      <div class="answers" id="answers" aria-live="polite"></div>
+    </div>
+
+    <div class="pane viewer" id="viewerPane">
+      <div class="viewer-bar"><span id="viewerLabel">Original report</span></div>
+      <iframe id="viewer" title="Original report" src="about:blank"></iframe>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">Evidence matching, not legal, investment or compliance advice. A missing answer means the evidence was not found, not that the company did not disclose it.</footer>
+
+<script type="module" src="src/app.js"></script>
+</body>
+</html>

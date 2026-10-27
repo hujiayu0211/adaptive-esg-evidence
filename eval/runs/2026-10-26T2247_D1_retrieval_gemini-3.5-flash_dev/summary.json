@@ -1,0 +1,47 @@
+{
+  "set": "D1",
+  "mode": "retrieval",
+  "model": "gemini-3.5-flash",
+  "n": 10,
+  "strict_pass": 9,
+  "answer_strict_pass": 5,
+  "answer_n": 6,
+  "answer_lenient_pass": 6,
+  "abstain_pass": 4,
+  "abstain_n": 4,
+  "unsafe_supported": 0,
+  "abstention_precision": 1,
+  "abstention_recall": 1,
+  "retrieval_recall_at_k": 0.8333333333333334,
+  "outcomes": {
+    "pass": 5,
+    "correct_off_gold_page": 1,
+    "abstained": 4
+  },
+  "by_type": {
+    "numeric": {
+      "n": 5,
+      "pass": 4
+    },
+    "target_vs_actual": {
+      "n": 1,
+      "pass": 1
+    },
+    "trap_company_absent": {
+      "n": 2,
+      "pass": 2
+    },
+    "trap_period": {
+      "n": 1,
+      "pass": 1
+    },
+    "unanswerable": {
+      "n": 1,
+      "pass": 1
+    }
+  },
+  "model_calls": 8,
+  "prompt_tokens": 25155,
+  "completion_tokens": 1748,
+  "median_ms": 15527
+}

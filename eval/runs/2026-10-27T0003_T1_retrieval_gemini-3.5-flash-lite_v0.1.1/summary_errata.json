@@ -1,0 +1,19 @@
+{
+  "errata_applied": [
+    "A06",
+    "W06"
+  ],
+  "strict_pass": 43,
+  "n": 45,
+  "answer_strict_pass": 30,
+  "answer_lenient_pass": 30,
+  "answer_n": 32,
+  "abstain_pass": 13,
+  "abstain_n": 13,
+  "unsafe_supported": 0,
+  "outcomes": {
+    "pass": 30,
+    "missed": 2,
+    "abstained": 13
+  }
+}

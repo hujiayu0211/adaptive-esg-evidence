@@ -1,0 +1,32 @@
+{
+  "set": "T2",
+  "set_file_sha256": "8a896c627078368df08e650e895dd7ccf07e6a6881f3a0040c6ff53c5a26335b",
+  "mode": "retrieval",
+  "k": 10,
+  "provider": "Google Gemini",
+  "model": "gemini-3.5-flash-lite",
+  "reasoning_effort": "low",
+  "versions": {
+    "parser": "x1",
+    "chunking": "c1-1100-180",
+    "retrieval": "r2-bm25-compounds-minilm-rrf-keep4x3",
+    "embedding": "Xenova/all-MiniLM-L6-v2",
+    "prompt": "p1",
+    "validator": "v2"
+  },
+  "cases": [
+    "E01",
+    "E02",
+    "E03",
+    "E04",
+    "E05",
+    "E06",
+    "E07",
+    "E08",
+    "E09",
+    "E10",
+    "E11",
+    "E12"
+  ],
+  "started_at": "2026-10-27T00:02:37.224Z"
+}

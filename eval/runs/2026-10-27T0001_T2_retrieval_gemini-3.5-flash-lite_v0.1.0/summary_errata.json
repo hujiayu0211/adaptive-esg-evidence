@@ -1,0 +1,20 @@
+{
+  "errata_applied": [
+    "E05",
+    "E07",
+    "E12"
+  ],
+  "strict_pass": 10,
+  "n": 12,
+  "answer_strict_pass": 7,
+  "answer_lenient_pass": 9,
+  "answer_n": 9,
+  "abstain_pass": 3,
+  "abstain_n": 3,
+  "unsafe_supported": 0,
+  "outcomes": {
+    "pass": 7,
+    "partial_correct": 2,
+    "abstained": 3
+  }
+}

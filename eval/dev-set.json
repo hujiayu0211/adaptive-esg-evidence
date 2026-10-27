@@ -1,0 +1,156 @@
+{
+  "name": "D1",
+  "description": "Development set for tuning. Not an accuracy measure.",
+  "reports": [
+    {
+      "id": "STO",
+      "company": "Santos",
+      "file": "L000000024_STO_FY2025_annual.pdf",
+      "title": "Santos Annual Report 2025",
+      "type": "annual",
+      "url": "https://www.santos.com/wp-content/uploads/2026/02/Appendix-4E-and-2025-Annual-Report.pdf",
+      "sha256": "e7810162dae52b75addf4ef6abe1822ef3483ec8f5508a5bf7b5e299a78f38a0",
+      "pdf_pages": 286
+    }
+  ],
+  "cases": [
+    {
+      "id": "D01",
+      "type": "numeric",
+      "expect": "answer",
+      "question": "What were Santos's equity share gross Scope 1 emissions in 2025?",
+      "all_of": [
+        3.55
+      ],
+      "forbidden": [
+        4.12
+      ],
+      "report": "STO",
+      "gold_pdf_pages": [
+        70
+      ],
+      "gold_page_labels": [
+        "68"
+      ]
+    },
+    {
+      "id": "D02",
+      "type": "numeric",
+      "expect": "answer",
+      "question": "What were Santos's location-based Scope 2 emissions in 2025?",
+      "all_of": [
+        0.26
+      ],
+      "report": "STO",
+      "gold_pdf_pages": [
+        70
+      ],
+      "gold_page_labels": [
+        "68"
+      ]
+    },
+    {
+      "id": "D03",
+      "type": "target_vs_actual",
+      "expect": "answer",
+      "question": "What is Santos's 2030 net Scope 1 and 2 emissions target in absolute terms?",
+      "all_of": [
+        4.1
+      ],
+      "report": "STO",
+      "gold_pdf_pages": [
+        52,
+        66
+      ],
+      "gold_page_labels": [
+        "50",
+        "64"
+      ]
+    },
+    {
+      "id": "D04",
+      "type": "numeric",
+      "expect": "answer",
+      "question": "What methane emissions intensity did Santos report for 2025?",
+      "all_of": [
+        0.16
+      ],
+      "forbidden": [
+        0.19
+      ],
+      "report": "STO",
+      "gold_pdf_pages": [
+        30,
+        56,
+        57,
+        67
+      ],
+      "gold_page_labels": [
+        "28",
+        "54",
+        "55",
+        "65"
+      ]
+    },
+    {
+      "id": "D05",
+      "type": "numeric",
+      "expect": "answer",
+      "question": "How much CO2e did Santos store during 2025?",
+      "all_of": [
+        0.41
+      ],
+      "report": "STO",
+      "gold_pdf_pages": [
+        67
+      ],
+      "gold_page_labels": [
+        "65"
+      ]
+    },
+    {
+      "id": "D06",
+      "type": "numeric",
+      "expect": "answer",
+      "question": "What carbon price does Santos assume for 2030?",
+      "all_of": [
+        63
+      ],
+      "report": "STO",
+      "gold_pdf_pages": [
+        23
+      ],
+      "gold_page_labels": [
+        "21"
+      ]
+    },
+    {
+      "id": "D07",
+      "type": "trap_company_absent",
+      "expect": "abstain",
+      "question": "What were Origin Energy's Scope 1 emissions in 2025?",
+      "report": "STO"
+    },
+    {
+      "id": "D08",
+      "type": "trap_period",
+      "expect": "abstain",
+      "question": "What were Santos's Scope 1 emissions in 2012?",
+      "report": "STO"
+    },
+    {
+      "id": "D09",
+      "type": "unanswerable",
+      "expect": "abstain",
+      "question": "How many hectares of land did Santos rehabilitate in 2019?",
+      "report": "STO"
+    },
+    {
+      "id": "D10",
+      "type": "trap_company_absent",
+      "expect": "abstain",
+      "question": "What were ExxonMobil's Scope 1 emissions in 2025?",
+      "report": "STO"
+    }
+  ]
+}
