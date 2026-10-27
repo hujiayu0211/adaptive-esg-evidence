@@ -12,7 +12,7 @@ Written by Claude (developer-authored, not independent) before any answering, re
 
 Rules:
 
-- Expected outcomes are never edited after a run. A suspected gold error is logged in `eval/ERRATA.md` with evidence, and both the original and the corrected score are reported.
+- Expected outcomes are never edited after a run. A suspected gold error is logged in `eval/errata.json` with evidence, and both the original and the corrected score are reported.
 - T1 is used to measure versions, not to tune them. Tuning uses the separate development set `eval/dev-set.json`.
 - When T1 has been used for several releases, freeze a new set and keep T1 as a regression set.
 

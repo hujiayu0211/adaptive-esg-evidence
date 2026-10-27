@@ -13,7 +13,7 @@
   - text questions.
 
   13 should be refused:
-  - 6 unanswerable questions, where the information is not in the report;
+  - 5 unanswerable questions, where the information is not in the report;
   - 3 questions on periods the report does not cover;
   - 3 questions about a company that does not appear in the report;
   - 2 questions about a company that is mentioned but whose emissions are not reported.
